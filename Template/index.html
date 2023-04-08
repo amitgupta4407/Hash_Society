@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <ul>
+        <li id="active" class="navb">Home</li>
+        <li>Market</li>
+        <li>News</li>
+        <li>Mutual_Funds</li>
+        <li>Tech</li>
+        <li>Careers</li>
+
+        <div class="button"></div>
+      </ul>
+    </div>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+        async
+      >
+          {
+          "symbols": [
+            [
+              "Apple",
+              "AAPL|1D"
+            ],
+            [
+              "Google",
+              "GOOGL|1D"
+            ],
+            [
+              "Microsoft",
+              "MSFT|1D"
+            ]
+          ],
+          "chartOnly": true,
+          "width": 1500,
+          "height": 500,
+          "locale": "in",
+          "colorTheme": "dark",
+          "autosize": false,
+          "showVolume": false,
+          "showMA": false,
+          "hideDateRanges": true,
+          "hideMarketStatus": true,
+          "hideSymbolLogo": true,
+          "scalePosition": "right",
+          "scaleMode": "Normal",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+          "fontSize": "10",
+          "noTimeScale": true,
+          "valuesTracking": "1",
+          "changeMode": "price-and-percent",
+          "chartType": "area",
+          "maLineColor": "#2962FF",
+          "maLineWidth": 1,
+          "maLength": 9,
+          "lineWidth": 2
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <!-- <div class="graphs">
+      <img src="./assets//stockgif.gif" />
+    </div> -->
+
+    <div class="group">
+      <h1>Hash Society</h1>
+    </div>
+
+    <!-- Data Table -->
+
+    <table>
+      <thead>
+         <tr>
+            <th>
+               Company
+            </th>
+            <th>
+               Price
+            </th>
+            <th>
+               Change
+            </th>
+            <th>
+               %Change
+            </th>
+            <th>
+               visual
+            </th>
+            
+         </tr>
+      </thead>
+      <tbody id ="data-output">
+      </tbody>
+    </table>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

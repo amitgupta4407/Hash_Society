@@ -1,0 +1,27 @@
+[
+    {
+        "id" : "1",
+        "name":"Google",
+        "price": "$200",
+        "change": "400",
+        "persentchange": "5%",
+        "image": "up"
+    },    
+    {
+        "id" : "2",
+        "name":"Google",
+        "price": "$200",
+        "change": "400",
+        "persentchange": "5%",
+        "image": "up"
+    },
+    {
+        "id" : "3",
+        "name":"Google",
+        "price": "$200",
+        "change": "400",
+        "persentchange": "5%",
+        "image": "up"
+    }
+    
+]
