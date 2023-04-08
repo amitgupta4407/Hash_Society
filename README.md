@@ -5,3 +5,6 @@
 
 ### Abstract of solution
 > This projects is about doing a sentimental analysis using
+
+### Conclusion
+>This project is about doing a sentimental analysis using NLP and bringing out relation with the past stock behaviour. The project conclude that twitter tweets have a great impact on the stock market behaviour . To show this we have created extracted NASDAQ stocks using logical media post of normal twitter user through a data extraction tool Apify, and further relating it with the provider per day trading values of NASDAQ listed companies.
