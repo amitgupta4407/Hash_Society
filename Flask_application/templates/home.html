@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Hash Society</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: #f5f3f3;
+      }
+      #banner {
+        height: 500px;
+        width: 100%;
+      }
+      #navbar ul {
+        position: fixed;
+        margin-top: 30px;
+        left: 50%;
+        right: 50%;
+        display: flex;
+        flex-direction: row;
+        transform: translate(-50%, -50%);
+        background: #8f43ee;
+        width: 100%;
+        height: 90px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+      }
+      ul li {
+        line-height: 70px;
+        width: 100px;
+        color: #fff;
+        text-transform: capitalize;
+        font-family: "popins", sans-serif;
+        list-style: none;
+        text-align: center;
+        font-size: 18px;
+        transition: 0.3s;
+        cursor: pointer;
+        padding: 10px;
+      }
+      li:hover {
+        color: rgb(9, 175, 134);
+      }
+
+      li:nth-child(2):hover ~ .button {
+        left: 150px;
+      }
+      li:nth-child(3):hover ~ .button {
+        left: 250px;
+      }
+      li:nth-child(4):hover ~ .button {
+        left: 350px;
+      }
+      li:nth-child(5):hover ~ .button {
+        left: 450px;
+      }
+      li:nth-child(6):hover ~ .button {
+        left: 550px;
+      }
+    </style>
+  </head>
+  <script>
+    function market() {  
+         location.href = "https://www.cnbc.com/search/?query=alphabet%20stocks&qsearchterm=alphabet%20stocks"
+    }
+    function news() {  
+         location.href = "https://web.stockedge.com/app/equities"
+    }
+    function mutualfund() {  
+         location.href = "https://www.cnbc.com/search/?query=alphabet%20stocks&qsearchterm=alphabet%20stocks"
+    }
+    function tech() {  
+         location.href = "https://www.cnbc.com/search/?query=alphabet%20stocks&qsearchterm=alphabet%20stocks"
+    }
+     
+     
+  </script>
+  <body>
+    <!-- Navbar -->
+
+    <div id="navbar">
+      <ul>
+        <li id="active" class="navb" href="#">Home</li>
+        <li onclick="market()">Market</li>
+        <li onclick="news()">News</li>
+        <li onclick="mutualfund()">Mutual_Funds</li>
+        <li onclick="tech()">Tech</li>
+        <li href="">Contact</li>
+
+        <div class="button"></div>
+      </ul>
+    </div>
+        <img
+          class="img-fluid"
+          id="banner"
+          src="../static/ps_banner.jpg"
+          alt="BANNER IMG"
+        />
+    </div>
+    <!--     1st -->
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Hash Society</h1>
+      <div class="row" style="margin-bottom: 32px">
+        <div class="col-md-6">
+          <p class="lead">
+            This project is about doing a sentimental analysis using NLP and
+            bringing out relation with the past stock behaviour. The project
+            conclude that twitter tweets have a great impact on the stock market
+            behaviour . To show this we have extracted NASDAQ stocks using
+            social media post of normal twitter user through a data extraction
+            tool Apify, and further relating it with the provider per day
+            trading values of NASDAQ listed companies.
+          </p>
+        </div>
+
+        <div class="d-none d-md-block col-md-6">
+          <img
+            class="img-fluid"
+            style
+            id="banner"
+            src="../static/banner.jpg"
+            alt="BANNER IMG"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        class="card"
+        style="
+          background-color: theme('colors.white');
+          border-radius: theme('borderRadius.lg');
+          padding: theme('spacing.6');
+          box-shadow: theme('boxShadow.md');
+          width: 600px;
+        "
+      >
+        <form action="/sentimental" method="POST">
+          <div class="form-group">
+            <label for="companyname">Company</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="companyname"
+              aria-describedby="companyname"
+              placeholder="companyname"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Text">Text</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="output"
+              placeholder="output"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary sm">Predict</button>
+        </form>
+
+        <div class="text-center">
+          <div>
+            <a
+              class="btn btn-primary btn-lg"
+              href="mailto:amitgupta4407@gmail.com"
+              >Contact us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a target="_blank" href="/" class="nav-link px-2 text-muted"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a target="_blank" href="/" class="nav-link px-2 text-muted"
+              >Courses</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a target="_blank" href="/" class="nav-link px-2 text-muted"
+              >Events</a
+            >
+          </li>
+          <li class="nav-item">
+            <a target="_blank" href="/" class="nav-link px-2 text-muted"
+              >About</a
+            >
+          </li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 Hash, Inc</p>
+      </footer>
+    </div>
+  </body>
+</html>
